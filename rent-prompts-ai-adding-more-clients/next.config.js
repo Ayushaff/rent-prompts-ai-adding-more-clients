@@ -24,6 +24,10 @@ const nextConfig = {
         hostname:'replicate.delivery',
         protocol: 'https',
       },
+      {
+        hostname:'rent-prompts-ai-adding-more-clients-zozv.vercel.app/',
+        protocol: 'https',
+      }
     ],
     minimumCacheTTL:1,
   },
