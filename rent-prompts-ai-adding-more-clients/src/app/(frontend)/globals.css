@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --border: 243.7 54.5% 41.4%;
+    --input:  225.9 100% 96.7%;
+
+    --radius: 0.3rem;
+    --ring: 243.7 54.5% 41.4%;
+
+    --background: 243.7 54.5% 41.4%;
+    --foreground: 225.9 100% 96.7%;
+
+    --muted: 243.7 60.5% 41.4%;
+    --muted-foreground: 234.5 89.5% 73.9%;
+
+    --popover: 243.8 47.1% 20%;
+    --popover-foreground: 225.9 100% 96.7%;
+
+    --card: 243.8 47.1% 20%;
+    --card-foreground: 225.9 100% 96.7%;
+
+    --primary: 225.9 100% 96.7%;
+    --primary-foreground: 242.2 47.4% 34.3%;
+
+    --secondary: 243.7 60.5% 41.4%;
+    --secondary-foreground: 225.9 100% 96.7%;
+
+    --accent: 243.7 54.5% 41.4%;
+    --accent-foreground: 225.9 100% 96.7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 225.9 100% 96.7%;
+
+    --warning: 42 100% 50%; /* Bright yellow for warnings */
+    --warning-foreground: 42 100% 15%; /* Darker yellow for text contrast */
+
+    --success: 145 63% 42%; /* Green for success */
+    --success-foreground: 145 85% 22%; /* Darker green for text contrast */
+
+    --danger: 0 75% 47%; /* Red for danger */
+    --danger-foreground: 0 90% 22%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  border: 8px solid #3490dc;
+  border-top-color: #e4e8ea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.dark {
+    --border: 243.7 54.5% 41.4%;
+    --input:  225.9 100% 96.7%;
+
+    --ring: 243.7 54.5% 41.4%;
+
+    --background: 243.7 54.5% 41.4%;
+    --foreground: 225.9 100% 96.7%;
+
+    --muted: 243.7 60.5% 41.4%;
+    --muted-foreground: 234.5 89.5% 73.9%;
+
+    --popover: 243.8 47.1% 20%;
+    --popover-foreground: 225.9 100% 96.7%;
+
+    --card: 243.8 47.1% 20%;
+    --card-foreground: 225.9 100% 96.7%;
+
+    --primary: 225.9 100% 96.7%;
+    --primary-foreground: 242.2 47.4% 34.3%;
+
+    --secondary: 243.7 60.5% 41.4%;
+    --secondary-foreground: 225.9 100% 96.7%;
+
+    --accent: 243.7 54.5% 41.4%;
+    --accent-foreground: 225.9 100% 96.7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 225.9 100% 96.7%;
+
+    --warning: 42 100% 45%;
+    --warning-foreground: 42 80% 15%;
+
+    --success: 145 60% 40%;
+    --success-foreground: 145 75% 15%;
+
+    --danger: 0 65% 42%;
+    --danger-foreground: 0 85% 20%;
+}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4F46E5;
+    border-radius: 24px;
+}
+/* To handle height for vertical scrollbar, you can control the thumb height */
+::-webkit-scrollbar-thumb {
+    max-height: 200px; /* Minimum height of the thumb handle */
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-popup {
+  animation: fadeInScale 0.3s ease-out; /* 0.3s for smooth animation */
+}
