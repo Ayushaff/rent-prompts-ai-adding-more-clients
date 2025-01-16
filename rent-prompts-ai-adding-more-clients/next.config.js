@@ -25,9 +25,13 @@ const nextConfig = {
         protocol: 'https',
       },
       {
-        hostname:'rent-prompts-ai-adding-more-clients-zozv.vercel.app/',
+        hostname: 'rent-prompts-ai-adding-more-clients-zozv.vercel.app', // Correct
         protocol: 'https',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: '**', // Allows all subdomains
+      },
     ],
     minimumCacheTTL:1,
   },
