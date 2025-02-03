@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/privateRapps/getRapps": {
+        "maxDuration":60
+      }
+    }
+  }
+  
