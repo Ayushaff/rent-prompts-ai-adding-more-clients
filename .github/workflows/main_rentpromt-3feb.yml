@@ -25,6 +25,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          cd rent-prompts-ai-adding-more-clients/
           yarn install
 
       - name: Zip artifact for deployment
